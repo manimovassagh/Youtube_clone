@@ -1,0 +1,8 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for a Youtube Clone Project",
+  "main": "index.js",
+  "author": "Mani Movassagh",
+  "license": "MIT"
+}
