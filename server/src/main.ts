@@ -11,12 +11,21 @@ const server = app.listen(PORT, () => {
 
 })
 
-const signals = ['SIGTERM', 'SIGINT']
 
-function gracefullShutDown(signal: string) {
+enum signalsEnum {
+    SIGTERM = 'SIGTERM',
+    SIGINT = 'SIGINT',
+}
+const signals: signalsEnum[] = [signalsEnum.SIGTERM, signalsEnum.SIGINT]
+
+
+
+function gracefullShutDown(signal: signalsEnum) {
     process.on(signal, async () => {
         server.close()
         //disconnect from DB
+        console.log(' Successfully ShutDown The Server');
+
         process.exit(0)
     })
 }

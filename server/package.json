@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Mani Movassagh",
   "license": "MIT",
+  "scripts": {
+    "dev":"tsnd --exit-child --transpile-only src/main.ts"
+  },
   "dependencies": {
     "@mantine/form": "^5.2.4",
     "@typegoose/typegoose": "^9.11.2",
